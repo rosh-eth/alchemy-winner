@@ -3,11 +3,11 @@ require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.18",
+  solidity: "0.8.0",
   networks: {
     goerli: {
       url: process.env.GOERLI_URL,
-      key: process.env.PRIVATE_KEY,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
